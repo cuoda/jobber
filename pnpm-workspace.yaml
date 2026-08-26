@@ -1,0 +1,7 @@
+autoInstallPeers: true
+allowBuilds:
+  nx: true
+  unrs-resolver: false
+  "@nestjs/core": false
+  '@parcel/watcher': true
+  less: true

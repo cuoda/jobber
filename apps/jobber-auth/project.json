@@ -20,7 +20,8 @@
             "NODE_ENV": "development"
           }
         }
-      }
+      },
+      "dependsOn": ["generate-types", "migrate-prisma"]
     },
     "prune-lockfile": {
       "dependsOn": [
@@ -79,6 +80,18 @@
     "test": {
       "options": {
         "passWithNoTests": true
+      }
+    },
+    "generate-types": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
+    },
+    "migrate-prisma": {
+      "command": "prisma migrate dev",
+      "options": {
+        "cwd": "apps/jobber-auth"
       }
     }
   }

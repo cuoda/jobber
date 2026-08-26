@@ -5,3 +5,12 @@ allowBuilds:
   "@nestjs/core": false
   '@parcel/watcher': true
   less: true
+  '@prisma/engines': true
+  prisma: true
+minimumReleaseAgeExclude:
+  - '@prisma/config@7.10.0'
+  - '@prisma/debug@7.10.0'
+  - '@prisma/engines@7.10.0'
+  - '@prisma/fetch-engine@7.10.0'
+  - '@prisma/get-platform@7.10.0'
+  - prisma@7.10.0

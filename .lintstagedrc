@@ -1,0 +1,10 @@
+{
+"*.{js,ts}": [
+    "nx affected --target=lint --fix --files",
+    "prettier --write"
+  ],
+  "*.{json,md}": [
+    "prettier --write"
+  ],
+  "*":["nx format:write --files"]
+}

@@ -2,11 +2,13 @@ autoInstallPeers: true
 allowBuilds:
   nx: true
   unrs-resolver: false
-  "@nestjs/core": false
+  '@nestjs/core': false
   '@parcel/watcher': true
   less: true
   '@prisma/engines': true
   prisma: true
+  '@apollo/protobufjs': true
+  bcrypt: true
 minimumReleaseAgeExclude:
   - '@prisma/config@7.10.0'
   - '@prisma/debug@7.10.0'

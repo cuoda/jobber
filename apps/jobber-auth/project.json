@@ -79,7 +79,7 @@
       }
     },
     "migrate-prisma": {
-      "command": "prisma migrate dev",
+      "command": "pnpm exec prisma migrate dev --name init",
       "options": {
         "cwd": "apps/jobber-auth"
       }

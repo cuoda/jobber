@@ -21,7 +21,7 @@
           }
         }
       },
-      "dependsOn": ["generate-types", "migrate-prisma"]
+      "dependsOn": ["generate-types"]
     },
     "prune-lockfile": {
       "dependsOn": ["build"],
@@ -70,7 +70,7 @@
       "options": {
         "passWithNoTests": true
       },
-      "dependsOn": ["generate-types", "migrate-prisma"]
+      "dependsOn": ["generate-types"]
     },
     "generate-types": {
       "command": "prisma generate",
@@ -78,8 +78,14 @@
         "cwd": "apps/jobber-auth"
       }
     },
-    "migrate-prisma": {
+    "migrate-dev": {
       "command": "pnpm exec prisma migrate dev --name init",
+      "options": {
+        "cwd": "apps/jobber-auth"
+      }
+    },
+    "migrate-prisma": {
+      "command": "pnpm exec prisma migrate deploy",
       "options": {
         "cwd": "apps/jobber-auth"
       }
